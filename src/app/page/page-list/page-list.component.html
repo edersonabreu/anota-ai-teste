@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="list">
+    <div class="container">
+        <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+        <div class="list-content">
+            <div *ngIf="dataSourceToShow?.length; then hasData else noData"></div>
+            <ng-template #hasData>
+                <ng-container *ngFor="let list of dataSourceToShow">
+                    <ng-container *ngIf="searchText === '' || list.title.toLowerCase().includes(searchText)"></ng-container>
+                        <div class="content">
+                            <button class="close" (click)="removerItem(list.id)"><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg></button>
+                            <div class="image" style="background-image: url('{{ list.img }}')">
+                                <span *ngIf="list.type == '1'" class="opt color1">Paisagem</span>
+                                <span *ngIf="list.type == '2'" class="opt color2">Flor</span>
+                                <span *ngIf="list.type == '3'" class="opt color3">Pizza</span>
+                            </div>
+                            <div class="info">
+                                <div class="title">
+                                    <h1>{{ list.title }}</h1>
+                                </div>
+                                <div class="text">
+                                    {{ list.description }}
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </ng-template>
+            <ng-template #noData>
+                <div class="container-fluid">
+                    Não há dados a serem exibidos no momento...
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

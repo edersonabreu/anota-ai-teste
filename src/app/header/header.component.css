@@ -1,0 +1,47 @@
+
+.header{
+    padding: 10px 0 5px;
+    box-shadow: 0 4px 2px -2px #ccc;
+    width: 100%;
+    display: inline-block;
+}
+
+.header .logo{
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+.header .logo img{
+    width: 45px;
+    height: auto;
+}
+
+.header .title{
+    display: inline-block;
+    vertical-align: super;
+}
+
+.header .title h1{
+    font-size: 18px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.header .title p{
+    font-size: 14px;
+    margin: 0;
+    font-style: italic;
+    color: gray;
+}
+
+@media (max-width: 575.98px){
+    .header .logo img{
+        width: 40px;
+    }
+    .header .title h1{
+        font-size: 14px;
+    }
+    .header .title p{
+        font-size: 12px;
+    }
+}
