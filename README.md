@@ -9,5 +9,7 @@ O programa deverá estar funcionando no endereço `http://localhost:4200/`.
 
 ## PrintScreen da Aplicação
 
-### Tela inicial - Lista
+### Tela inicial - Listagem com filtro
+
+![Test-front-anota-ai](https://github.com/edersonabreu/anota-ai-teste/assets/29956737/244780eb-b41e-45e8-99d1-8fc07cc8f597)
 
